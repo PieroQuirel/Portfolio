@@ -1,22 +1,59 @@
+---
+import "../styles/tailwind.css";
+import Header from "@components/Header.astro";
+import '@fontsource/saira-semi-condensed/500.css';
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="Piero Quiroz crea aplicaciones web y móviles con creatividad"/>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Portafolio de Piero Quiroz</title>
 	</head>
-	<body>
-		<slot />
-	</body>
+
+	<body class="bg-neutral-950">
+  	<div class="relative min-h-screen">
+    <div class="absolute inset-0 z-[-2] bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(250,120,120,0.3),rgba(255,255,255,0))]"></div>
+
+    <Header />
+    <slot />
+  	</div>
+</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+<style is:global>
+
+	:root {
+		color-scheme: light dark;
 	}
+
+	html {
+		font-family: 'Saira Semi Condensed', sans-serif;
+		scroll-behavior: smooth;
+	}
+
+	body {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+		color: #fff;
+
+		background-color: #000;
+		background-image:
+		linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
+		url("/src/images/binding-dark.png");
+		background-repeat: repeat;
+		background-size: auto;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
+
 </style>

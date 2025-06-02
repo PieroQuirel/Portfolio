@@ -1,0 +1,30 @@
+---
+import ExperienciaItem from "./ExperienciaItem.astro"
+
+const EXPERIENCIA = [
+    {
+        logo: "/src/images/Zeytol.png",
+        date: "Agosto 2024 - Febrero 2025",
+        title: "Desarrollador FullStack",
+        company: "ZEYTOL (Caqui Systems & Hns)",
+        description: "Mejoré la escalabilidad al diseñar la API RESTful en Node JS y Spring Boot con DTO reduciendo la carga al 20%. Diseñé la lógica de negocio y realicé la conexión a la BD con MySQL, optimizando la arquitectura en un 15%. Implementé con Laravel el backend de un módulo de “Registro Civil” refactorizando el 10% del proyecto. Apoyé con el diseño y desarrollo frontend con Angular con diseños atractivos y responsivos.",
+        link: "https://codelab.com"
+    },
+    {
+        logo: "/src/images/PDR.png",
+        date: "Enero - Abril 2024",
+        title: "Desarrollador Frontend",
+        company: "Peru Data Recovery",
+        description: "Mejoré el rendimiento en un 20% de los módulos asignados con Java JSF y SQL Server, así como su documentación. Participé en la reestructuración del proyecto con el nuevo equipo de 6 integrantes, guiándolos en el proceso.",
+        link: "https://codelab.com"
+    },
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ">  
+    {EXPERIENCIA.map((experiencia) => (
+        <li class="mb-10 ms-4">
+            <ExperienciaItem {...experiencia} />
+        </li>
+    ))}
+</ol>
+

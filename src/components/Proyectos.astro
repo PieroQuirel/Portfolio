@@ -1,0 +1,39 @@
+---
+import { date } from "astro:schema"
+import ProyectoCard from "./ProyectoCard.astro"
+
+const PROYECTOS = [
+    {
+        image: "/src/images/celleyes-app.png",
+        title: "CELLEYES",
+        date: "Abril - Diciembre 2024",
+        description: "Desarrollé la app mobile con Flutter para asegurar compatibilidad entre Android y iOS a partir de un código base, encargándome de diseñar tanto la interfaz (UI) como la experiencia de usuario (UX). Utilicé MySQL como BD para sincronización en tiempo real. Realicé el testing manual y apliqué feedback de los usuarios. Backend con Django para mayor rapidez con gran volumen de datos, Frontend con Angular por su escalabilidad.",
+        link1: "https://github.com/Tecsupsoft",
+        link2: "https://github.com/Tecsupsoft",
+        style: "bg-blue-500 items-baseline"
+    },
+    {
+        image: "/src/images/Uywalky.png",
+        title: "UyWalky",
+        date: "Noviembre - Diciembre 2023",
+        description: "Realicé el frontend responsivo con React, optimizando la experiencia de usuario y el diseño de componentes. Proyecto presentado en la Feria Tecnológica de TECSUP.",
+        link1: "https://github.com/CarlitosMikhaelTP/PROJECT_2023-II",
+        link2: "https://github.com/CarlitosMikhaelTP/PROJECT_2023-II",
+        style: "bg-orange-500 items-center"
+    },
+    {
+        image: "/src/images/patitas.png",
+        title: "Refugio de Patitas",
+        date: "Julio 2023",
+        description: "Realicé el backend y sus protocolos con Laravel para un alto rendimiento. Utilicé SQLite para la BD, por su rapidez y efectividad.",
+        link1: "https://github.com/PieroQuirel/RefugioPatitas",
+        link2: "https://github.com/PieroQuirel/RefugioPatitas",
+        style: "bg-gray-200 items-center"
+    },
+]
+---
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {PROYECTOS.map((proyecto) => (
+            <ProyectoCard {...proyecto} />
+    ))}
+</div>
